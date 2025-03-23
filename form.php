@@ -22,7 +22,7 @@
         <div class="rounded shadow-sm p-3 bg-white">
             <h1 class="text-center">FROM</h1>
             <div class="d-flex justify-content-center">
-                <form action="" method="post" class="w-75">
+                <form action="functions/insert.php" method="post" class="w-75">
                     <input type="hidden"  class="form-control" name="date_id" value="<?=$get['date_id']?>" required>
                     <div class="time d-flex justify-content-center gap-3">
                         <h4>Date: <?php echo $get['date'] ?></h4>
@@ -46,7 +46,8 @@
                         <input type="text"  class="form-control" name="user_id" required>
                     </div>
                     <div class="form-group mb-3">
-                        <button type="submit" class="btn btn-primary">Reserve</button>
+                        <!-- <button type="submit" class="btn btn-primary">Reserve</button> -->
+                        <a href="queue_code.php" class="btn btn-primary">Reserve</a>
                     </div>
                 </form>
             </div>

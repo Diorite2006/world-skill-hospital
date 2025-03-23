@@ -27,6 +27,13 @@
                     </div>
                 </div>
             <?php }; ?>
+            <div class="col-md-2 text-center my-2">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <a href="index.php" class="text-normal text-light">23-03-25</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <hr>
 
@@ -46,7 +53,7 @@
                                     <h6 class="text-muted">Ws_Hospital</h6>
                                 </div>
                                 <div class="col-md-6 my-auto">
-                                    <h4 class="float-end">status</h4>
+                                    <h4 class="float-end">ว่าง</h4>
                                 </div>
                             </div>
                         </div>

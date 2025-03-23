@@ -14,8 +14,10 @@
         <div class="rounded shadow-sm p-3 d-flex justify-content-center align-items-center w-50 bg-white">
             <div class="queue">
                 <div class="status text-center">
-                    <h1 class="text-success">0000</h1>
-                    <p class="text-muted    ">The reservation was completed.</p>
+                    <h1 class="text-success">0001</h1>
+                    <h6>DATE : 2025-03-24</h6>
+                    <h6>Time : 08:00-12:00</h6>
+                    <p class="text-muted">The reservation was completed.</p>
                 </div>
             </div>
         </div>
