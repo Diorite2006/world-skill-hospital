@@ -14,41 +14,47 @@
     <!-- time -->
     <div class="container">
         <div class="row mt-5">
-        <?php
+            <?php
             $sql = "select * from dates";
             $result = $conn->query($sql);
-            while($row = $result->fetch_array()) {
-        ?>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="index.php?time=<?php echo $row['id']?>"><?php echo $row['date']?></a>
+            while ($row = $result->fetch_array()) {
+            ?>
+                <div class="col-md-2 text-center my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="index.php?id=<?php echo $row['id'] ?>" class="text-normal"><?php echo $row['date'] ?></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php
-            };
-        ?>
+            <?php }; ?>
         </div>
         <hr>
 
         <?php
-            $sql = "";
-            $result = $conn->query($sql);
+        $date_id = $_GET['id'];
+        $sql = "SELECT * FROM `times` WHERE date_id = '$date_id'";
+        $result = $conn->query($sql);
+        while ($row = $result->fetch_array()) {
         ?>
-        <a href="">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h4></h4>
-                            
+            <a href="" class="text-normal">
+                <div class="card my-2">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4><?php echo $row['time']; ?></h4>
+                                <h6 class="text-muted">Ws_Hospital</h6>
+                            </div>
+                            <div class="col-md-6 my-auto">
+                                <h4 class="float-end">status</h4>
+                            </div>
                         </div>
-                        <div class="col-md-6 float-end">status</div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        <?php
+        }
+        ?>
+
     </div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
