@@ -13,31 +13,38 @@
     <?php include('include/navbar.php'); ?>
     <!-- time -->
     <div class="container">
-        <div class="row">
-     <?php
-        $sql = "select * from dates group by date";
-        $result = $conn->query($sql);
-        while($row = $result->fetch_array()) {
+        <div class="row mt-5">
+        <?php
+            $sql = "select * from dates";
+            $result = $conn->query($sql);
+            while($row = $result->fetch_array()) {
         ?>
             <div class="col-md-2">
                 <div class="card">
                     <div class="card-body">
-                        <h4><?php echo $row['date']?></h4>
+                        <a href="index.php?time=<?php echo $row['id']?>"><?php echo $row['date']?></a>
                     </div>
                 </div>
             </div>
-            <?php
+        <?php
             };
-            ?>
+        ?>
         </div>
         <hr>
 
+        <?php
+            $sql = "";
+            $result = $conn->query($sql);
+        ?>
         <a href="">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6">time</div>
-                        <div class="col-md-6">status</div>
+                        <div class="col-md-6">
+                            <h4></h4>
+                            
+                        </div>
+                        <div class="col-md-6 float-end">status</div>
                     </div>
                 </div>
             </div>
