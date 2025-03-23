@@ -13,3 +13,8 @@
     color: #000;
     text-decoration: none;
 }
+
+.card-hover:hover {
+    transition: .5s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
