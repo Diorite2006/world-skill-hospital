@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ws_Hospital</title>
     <?php include('include/header.php'); ?>
+    <?php include('include/config.php'); ?>
 </head>
 
 <body>
@@ -35,52 +36,25 @@
         </div>
     </nav>
 
+    <!-- time -->
     <div class="container">
         <div class="row">
+     <?php
+        $sql = "select * from dates group by date";
+        $result = $conn->query($sql);
+        while($row = $result->fetch_array()) {
+        ?>
             <div class="col-md-2">
                 <div class="card">
                     <div class="card-body">
-                        <h4></h4>
+                        <h4><?php echo $row['date']?></h4>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h4></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h4></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h4></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h4></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h4></h4>
-                    </div>
-                </div>
-            </div>
+            <?php
+            };
+            ?>
         </div>
-
         <hr>
 
         <a href="">
