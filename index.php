@@ -35,23 +35,20 @@
         <?php
             $sql = "";
             $result = $conn->query($sql);
-            while($row = $result->fetch_array()) {
         ?>
         <a href="">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5><></h5>
+                            <h4></h4>
+                            
                         </div>
-                        <div class="col-md-6">status</div>
+                        <div class="col-md-6 float-end">status</div>
                     </div>
                 </div>
             </div>
         </a>
-        <?php
-            };
-        ?>
     </div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
